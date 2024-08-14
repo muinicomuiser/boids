@@ -19,7 +19,7 @@ CANVAS.height = 680;
 const CENTROCANVAS: Punto = {x:CANVAS.width/2, y: CANVAS.height/2};
 
 const NUMEROBOIDS: number = 200;
-const ESCALA: number = 2;
+const ESCALA: number = 3;
 const VELMAXIMA: number = 3;
 
 const ROTARSEGUNVELOCIDAD: boolean = true;
@@ -30,7 +30,7 @@ const FUERZAREPELER: number = 20;
 const DISTANCIACOORDINAR: number = 60;
 const FACTORCOORDINACION: number = 0.4;
 
-const COLORBOID: string = Dibujante.colorHSL(50, 100, 70);
+const COLORBOID: string = Dibujante.colorHSL(50, 100, 100);
 const COLORFONDO: string = Dibujante.colorHSL(220, 100, 0);
 
 const DETECTARMOUSE: boolean = true;
