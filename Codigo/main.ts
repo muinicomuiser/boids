@@ -12,29 +12,29 @@ import { Restriccion } from "./Fuente/Interaccion/Restriccion.js";
 
 const CANVAS: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas");
 const CONTEXT: CanvasRenderingContext2D = CANVAS.getContext("2d")!;
-CANVAS.width = 1150;
+CANVAS.width = 920;
 CANVAS.height = 680;
 
 //CONSTANTES
 const CENTROCANVAS: Punto = {x:CANVAS.width/2, y: CANVAS.height/2};
 
 const NUMEROBOIDS: number = 200;
-const ESCALA: number = 3;
-const VELMAXIMA: number = 3;
+const ESCALA: number = 2;
+const VELMAXIMA: number = 2;
 
 const ROTARSEGUNVELOCIDAD: boolean = true;
     
-const DISTANCIAREPELER: number = 10;
-const FUERZAREPELER: number = 20;
+const DISTANCIAREPELER: number = 20;
+const FUERZAREPELER: number = 2;
     
-const DISTANCIACOORDINAR: number = 60;
+const DISTANCIACOORDINAR: number = 40;
 const FACTORCOORDINACION: number = 0.4;
 
 const COLORBOID: string = Dibujante.colorHSL(50, 100, 100);
 const COLORFONDO: string = Dibujante.colorHSL(220, 100, 0);
 
 const DETECTARMOUSE: boolean = true;
-const ATRACCIONMOUSE: number = 0.2;
+const ATRACCIONMOUSE: number = 0.1;
 
 ////////////////
 
@@ -177,8 +177,8 @@ if(DETECTARMOUSE){
         }
     })
     CANVAS.addEventListener("mousemove", (event)=>{
-        let mouseX: number = event.pageX;
-        let mouseY: number = event.pageY;
+        let mouseX: number = event.pageX - CANVAS.offsetLeft;
+        let mouseY: number = event.pageY - CANVAS.offsetTop
         vectorMouse = Vector.crear(mouseX, mouseY);
     })
 }

@@ -1260,8 +1260,8 @@
             }
         });
         CANVAS.addEventListener("mousemove", (event) => {
-            let mouseX = event.pageX;
-            let mouseY = event.pageY;
+            let mouseX = event.pageX - CANVAS.offsetLeft;
+            let mouseY = event.pageY - CANVAS.offsetTop;
             vectorMouse = Vector.crear(mouseX, mouseY);
         });
     }

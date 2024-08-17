@@ -1,7 +1,15 @@
-- Documentación
-- Estudiar y aplicar energía, conservación del momento, fuerzas, normales y transformaciones.
-- Revisar getters y setters, simplificar métodos de aplicación de transformaciones.
-- Simplificar. Que a todas las funcionalidades de trabajo con cuerpos se pueda acceder por medio de una o dos instancias y módulos.
-- Organizar en carpetas por jerarquías o utilidades.
+BOIDS
 
-*Propuesta de estructura
+    Agregar botones y casillas para cambiar:
+        número de boids
+        tamaño de boids
+        magnitud de la atracción entre boids
+        rango de atracción entre boids
+        magnitud de repulsión entre boids
+        rango de repulsión entre boids
+        botón de reiniciar
+        activar/desactivar influencia del mouse
+    
+    Cambiar le tamaño del canvas
+
+    Modo claro/oscuro
