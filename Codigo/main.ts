@@ -12,7 +12,7 @@ import { Restriccion } from "./Fuente/Interaccion/Restriccion.js";
 
 const CANVAS: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas");
 const CONTEXT: CanvasRenderingContext2D = CANVAS.getContext("2d")!;
-CANVAS.width = 920;
+CANVAS.width = 1150;
 CANVAS.height = 680;
 
 //CONSTANTES

@@ -1155,21 +1155,21 @@
     /**AQUÍ EMPECÉ A PROBAR ATRACCIONES Y REPULSIONES.*/
     const CANVAS = document.getElementById("canvas");
     const CONTEXT = CANVAS.getContext("2d");
-    CANVAS.width = 920;
+    CANVAS.width = 1150;
     CANVAS.height = 680;
     //CONSTANTES
     const CENTROCANVAS = { x: CANVAS.width / 2, y: CANVAS.height / 2 };
     const NUMEROBOIDS = 200;
-    const ESCALA = 2;
+    const ESCALA = 1.5;
     const VELMAXIMA = 2;
     const ROTARSEGUNVELOCIDAD = true;
     const DISTANCIAREPELER = 20;
-    const FUERZAREPELER = 2;
+    const FUERZAREPELER = 1.5;
     const DISTANCIACOORDINAR = 40;
-    const FACTORCOORDINACION = 0.4;
+    const FACTORCOORDINACION = 0.5;
     const COLORBOID = Dibujante.colorHSL(50, 100, 100);
     const COLORFONDO = Dibujante.colorHSL(220, 100, 0);
-    const ATRACCIONMOUSE = 0.1;
+    const ATRACCIONMOUSE = 0.05;
     ////////////////
     let mousePresente = false;
     let vectorMouse = Vector.cero();
