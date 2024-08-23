@@ -1,19 +1,12 @@
-import { Matematica } from "./Fuente/Utiles/Matematica.js";
-import { Punto } from "./Fuente/GeometriaPlana/Punto.js";
-import { Forma } from "./Fuente/GeometriaPlana/Formas.js";
-import { Vector } from "./Fuente/GeometriaPlana/Vector.js";
-import { Dibujante } from "./Fuente/Renderizado/Dibujante.js";
-import { Cuerpo } from "./Fuente/Fisicas/Cuerpo.js";
-import { Fuerza } from "./Fuente/Fisicas/Fuerza.js";
-import { Geometria } from "./Fuente/Utiles/Geometria.js";
-import { Restriccion } from "./Fuente/Interaccion/Restriccion.js";
+import { Punto, Forma, Vector, Renderizado, Cuerpo, Fuerza, Geometria, Restriccion, Matematica } from "./Fuente/mui.js";
 
 /**AQUÍ EMPECÉ A PROBAR ATRACCIONES Y REPULSIONES.*/
 
 const CANVAS: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas");
-const CONTEXT: CanvasRenderingContext2D = CANVAS.getContext("2d")!;
-CANVAS.width = 1150;
-CANVAS.height = 680;
+CANVAS.width = window.innerWidth - 20;
+CANVAS.height = window.innerHeight - 50;
+// CANVAS.width = 1150;
+// CANVAS.height = 680;
 
 //CONSTANTES
 const CENTROCANVAS: Punto = {x:CANVAS.width/2, y: CANVAS.height/2};
@@ -30,8 +23,8 @@ const FUERZAREPELER: number = 1.5;
 const DISTANCIACOORDINAR: number = 40;
 const FACTORCOORDINACION: number = 0.5;
 
-const COLORBOID: string = Dibujante.colorHSL(50, 100, 100);
-const COLORFONDO: string = Dibujante.colorHSL(220, 100, 0);
+const COLORBOID: string = Renderizado.colorHSL(50, 100, 100);
+const COLORFONDO: string = Renderizado.colorHSL(220, 100, 0);
 
 const DETECTARMOUSE: boolean = true;
 const ATRACCIONMOUSE: number = 0.05;
@@ -44,7 +37,7 @@ CANVAS.style.backgroundColor = COLORFONDO;
     
 window.addEventListener("load", ()=>{
     
-    let dibu: Dibujante = new Dibujante(CONTEXT)
+    let dibu: Renderizado = new Renderizado(CANVAS)
     dibu.colorFondo = COLORFONDO;
 
     /**Forma generadora de posiciones.*/
@@ -126,7 +119,7 @@ window.addEventListener("load", ()=>{
     //tiempoProceso();
     function animar(){
 
-        dibu.limpiarCanvas(CANVAS)
+        dibu.limpiarCanvas()
         
         for(let i: number = 0; i < boids.length-1; i++){
             for(let j: number = i+1; j < boids.length; j++){
