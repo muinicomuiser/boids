@@ -5,24 +5,26 @@ import { Punto, Forma, Vector, Renderizado, Cuerpo, Fuerza, Geometria, Restricci
 const CANVAS: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas");
 CANVAS.width = window.innerWidth - 40;
 CANVAS.height = window.innerHeight - 40;
-// CANVAS.width = 1150;
-// CANVAS.height = 680;
+// CANVAS.width = 280;
+// CANVAS.height = 700;
 
 //CONSTANTES
 const CENTROCANVAS: Punto = {x:CANVAS.width/2, y: CANVAS.height/2};
-const RADIOFORMAGENERADORA: number = CANVAS.width < CANVAS.height ? CANVAS.width / 4 : CANVAS.height / 4;
+// const RADIOFORMAGENERADORA: number = 150;
+const RADIOFORMAGENERADORA: number = CANVAS.width < CANVAS.height ? CANVAS.width / 2.5 : CANVAS.height / 2.5;
 
-const NUMEROBOIDS: number = 200;
+const NUMEROBOIDS: number = Math.floor(RADIOFORMAGENERADORA) < 200 ? Math.floor(RADIOFORMAGENERADORA) : 200;
+console.log(NUMEROBOIDS)
 const ESCALA: number = 1.5;
-const VELMAXIMA: number = 2;
+const VELMAXIMA: number = 1.6;
 
 const ROTARSEGUNVELOCIDAD: boolean = true;
     
 const DISTANCIAREPELER: number = 20;
-const FUERZAREPELER: number = 1.5;
+const FUERZAREPELER: number = 1;
     
-const DISTANCIACOORDINAR: number = 40;
-const FACTORCOORDINACION: number = 0.5;
+const DISTANCIACOORDINAR: number = 30;
+const FACTORCOORDINACION: number = 0.4;
 
 const COLORBOID: string = Renderizado.colorHSL(50, 100, 100);
 const COLORFONDO: string = Renderizado.colorHSL(220, 100, 0);
