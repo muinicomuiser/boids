@@ -991,12 +991,13 @@
 
     /**AQUÍ EMPECÉ A PROBAR ATRACCIONES Y REPULSIONES.*/
     const CANVAS = document.getElementById("canvas");
-    CANVAS.width = window.innerWidth - 20;
-    CANVAS.height = window.innerHeight - 50;
+    CANVAS.width = window.innerWidth - 40;
+    CANVAS.height = window.innerHeight - 40;
     // CANVAS.width = 1150;
     // CANVAS.height = 680;
     //CONSTANTES
     const CENTROCANVAS = { x: CANVAS.width / 2, y: CANVAS.height / 2 };
+    const RADIOFORMAGENERADORA = CANVAS.width < CANVAS.height ? CANVAS.width / 4 : CANVAS.height / 4;
     const NUMEROBOIDS = 200;
     const ESCALA = 1.5;
     const VELMAXIMA = 2;
@@ -1016,7 +1017,7 @@
         let dibu = new Renderizado(CANVAS);
         dibu.colorFondo = COLORFONDO;
         /**Forma generadora de posiciones.*/
-        let formaGeneradora = Forma.poligono(CENTROCANVAS.x, CENTROCANVAS.y, NUMEROBOIDS, 320);
+        let formaGeneradora = Forma.poligono(CENTROCANVAS.x, CENTROCANVAS.y, NUMEROBOIDS, RADIOFORMAGENERADORA);
         /**Generador de círculos.*/
         let boids = [];
         let verticesboids = [Vector.crear(3, 0), Vector.crear(-1, -1), Vector.crear(0, 0), Vector.crear(-1, 1)];

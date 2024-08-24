@@ -3,13 +3,14 @@ import { Punto, Forma, Vector, Renderizado, Cuerpo, Fuerza, Geometria, Restricci
 /**AQUÍ EMPECÉ A PROBAR ATRACCIONES Y REPULSIONES.*/
 
 const CANVAS: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas");
-CANVAS.width = window.innerWidth - 20;
-CANVAS.height = window.innerHeight - 50;
+CANVAS.width = window.innerWidth - 40;
+CANVAS.height = window.innerHeight - 40;
 // CANVAS.width = 1150;
 // CANVAS.height = 680;
 
 //CONSTANTES
 const CENTROCANVAS: Punto = {x:CANVAS.width/2, y: CANVAS.height/2};
+const RADIOFORMAGENERADORA: number = CANVAS.width < CANVAS.height ? CANVAS.width / 4 : CANVAS.height / 4;
 
 const NUMEROBOIDS: number = 200;
 const ESCALA: number = 1.5;
@@ -41,7 +42,8 @@ window.addEventListener("load", ()=>{
     dibu.colorFondo = COLORFONDO;
 
     /**Forma generadora de posiciones.*/
-    let formaGeneradora: Forma = Forma.poligono(CENTROCANVAS.x, CENTROCANVAS.y, NUMEROBOIDS, 320);
+
+    let formaGeneradora: Forma = Forma.poligono(CENTROCANVAS.x, CENTROCANVAS.y, NUMEROBOIDS, RADIOFORMAGENERADORA);
     
     /**Generador de círculos.*/
     let boids: Cuerpo[] = [];
