@@ -10,6 +10,6 @@ BOIDS
         botón de reiniciar
         activar/desactivar influencia del mouse
     
-    Cambiar le tamaño del canvas
+    Cambiar el tamaño del canvas
 
     Modo claro/oscuro
