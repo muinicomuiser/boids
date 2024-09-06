@@ -11,7 +11,7 @@ Versión de Nicolás Donoso usando <a href='https://github.com/muinicomuiser/mui
 
 ## Descripción
 
-Boids es un tipo de simulación de vida artificial creado por Craig Reynolds en 1986.      
+Boids es un tipo de simulación de vida artificial creada por Craig Reynolds en 1986.      
 Consiste un conjunto de cuerpos que se mueven libremente y coordinan su movimiento entre sí.      
 Emplea tres mecanismos:     
 - Repulsión. Dos o más boids se repelen mutuamente cuando están demasiado cerca.      
