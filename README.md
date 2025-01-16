@@ -7,7 +7,7 @@
 ## Boids
 
 Los boids parecen bandadas y cardúmenes     
-Versión de Nicolás Donoso usando <a href='https://github.com/muinicomuiser/mui-js'>mui.js</a>
+Versión de Nicolás Donoso usando <a href='https://github.com/muinicomuiser/muijs-cuerpos'>muijs-cuerpos</a>
 
 ## Descripción
 
